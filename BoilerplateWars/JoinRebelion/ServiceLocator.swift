@@ -15,7 +15,7 @@ class ServiceLocator {
 
     static var sharedInstance = ServiceLocator()
 
-    func getJoinRebelionPresenter(view: JoinRebelionView) -> JoinRebelionPresenter {
-        return JoinRebelionPresenter(view)
+    func getJoinRebelionPresenter() -> JoinRebelionPresenter {
+        return JoinRebelionPresenter()
     }
 }

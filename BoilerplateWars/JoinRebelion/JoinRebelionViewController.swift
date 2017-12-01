@@ -10,22 +10,52 @@ import UIKit
 
 class JoinRebelionViewController: UIViewController {
 
-    @IBOutlet weak var starFighterNameTextField: UITextField!
+    @IBOutlet weak var starFighterNameTextField: UITextField! {
+        didSet {
+            observer.from(presenter.viewModel, \.fighterNameText).mapAsOptional().to(starFighterNameTextField, \.text)
+            observer.from(presenter.viewModel, \.isFighterNameEnabled).to(starFighterNameTextField, \.isEnabled)
+        }
+    }
     @IBOutlet weak var joinButton: UIButton!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel! {
+        didSet {
+            observer.from(presenter.viewModel, \.isDescriptionHidden).to(descriptionLabel, \.isHidden)
+            observer.from(presenter.viewModel, \.descriptionText).mapAsOptional().to(descriptionLabel, \.text)
+            observer.from(presenter.viewModel, \.descriptionColor).map({
+                switch $0.color {
+                case .Default: return UIColor.black
+                case .Error: return UIColor(red: 153/255, green: 0, blue: 51/255, alpha: 1)
+                case .Success: return UIColor(red: 255/255, green: 128/255, blue: 0, alpha: 1)
+                }
+            }).to(descriptionLabel, \.textColor)
+        }
+    }
     @IBOutlet weak var rebelionLogo: UIImageView!
     
     @IBOutlet var horizontalSpacingFighterAndJoin: NSLayoutConstraint!
+
     var presenter: JoinRebelionPresenter!
 
+    var observer = Observer()
+
+    override func awakeFromNib() {
+        presenter = ServiceLocator.sharedInstance.getJoinRebelionPresenter()
+        super.awakeFromNib()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = ServiceLocator.sharedInstance.getJoinRebelionPresenter(view: self)
         presenter.viewDidLoad()
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        // Everything related to animations cannot be in didSet
+        observer.from(presenter.viewModel, \.isJoinButtonVisible).to { visibleWithAnimation in
+            self.horizontalSpacingFighterAndJoin.isActive = visibleWithAnimation.visible
+            if visibleWithAnimation.animation {
+                UIView.animate(withDuration: 0.3) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
     }
 
     @IBAction func joinButtonTapped(_ sender: Any) {
@@ -36,42 +66,3 @@ class JoinRebelionViewController: UIViewController {
         presenter.figherNameChanged(sender.text)
     }
 }
-
-extension JoinRebelionViewController: JoinRebelionView {
-    func setDescription(color: JoinRebelionPresenter.DescriptionColor) {
-        switch color {
-        case .Error:
-            descriptionLabel.textColor = UIColor(red: 153/255, green: 0, blue: 51/255, alpha: 1)
-        case .Success:
-            descriptionLabel.textColor = UIColor(red: 255/255, green: 128/255, blue: 0, alpha: 1)
-        }
-    }
-
-    func disableFighterName() {
-        starFighterNameTextField.isEnabled = false
-    }
-
-    func clearFighterName() {
-        starFighterNameTextField.text = ""
-    }
-
-    func setDescriptionHidden(_ isHidden: Bool) {
-        descriptionLabel.isHidden = isHidden
-    }
-
-    func setJoinVisible(_ isVisible: Bool, animated: Bool) {
-        if horizontalSpacingFighterAndJoin.isActive != isVisible {
-            horizontalSpacingFighterAndJoin.isActive = isVisible
-            if animated {
-                UIView.animate(withDuration: 0.3) {
-                    self.view.layoutIfNeeded()
-                }
-            }
-        }
-    }
-
-    func setDescription(message: String) {
-        descriptionLabel.text = message
-    }
-}
-
