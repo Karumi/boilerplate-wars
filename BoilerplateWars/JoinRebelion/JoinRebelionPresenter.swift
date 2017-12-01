@@ -32,8 +32,8 @@ class JoinRebelionPresenter {
 
     let errorMessages = [
         "Sorry, we can't use that fighter. Try with another one",
-        "Ouch! Are you sure you wanna use that machine? The rebelion is trying to bring The Empire to its knees, don't make us lose our time.",
-        "Attention: one more error and everything is gone. Choose your fighter wisely. It has to be fast, it has to be strong, it has to be e'X'cellent for the 'WING'.",
+        "Ouch! Are you sure you wanna use that machine? The rebellion is trying to bring The Empire to its knees, don't make us lose our time.",
+        "Attention: one more error and everything is gone. Choose your fighter wisely. It has to be fast; it has to be strong, it has to be e'X'cellent for the 'WING'.",
         "REJECTED! \n\nWe don't know if you feel The Force, but we are sure you don't have a proper fighter to help us."
     ]
 
