@@ -15,6 +15,7 @@
 		A16DCA971FCCD8BF007EB7F6 /* BoilerplateWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCA961FCCD8BF007EB7F6 /* BoilerplateWarsTests.swift */; };
 		A16DCAAC1FCF713A007EB7F6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCAAB1FCF713A007EB7F6 /* ServiceLocator.swift */; };
 		A16DCAAE1FCF7185007EB7F6 /* JoinRebelionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCAAD1FCF7185007EB7F6 /* JoinRebelionPresenter.swift */; };
+		A1AB4A1B1FD16209007E0410 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AB4A1A1FD16209007E0410 /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		A16DCA981FCCD8BF007EB7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A16DCAAB1FCF713A007EB7F6 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		A16DCAAD1FCF7185007EB7F6 /* JoinRebelionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRebelionPresenter.swift; sourceTree = "<group>"; };
+		A1AB4A1A1FD16209007E0410 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				A16DCA881FCCD8BE007EB7F6 /* Assets.xcassets */,
 				A16DCA8A1FCCD8BE007EB7F6 /* LaunchScreen.storyboard */,
 				A16DCA8D1FCCD8BE007EB7F6 /* Info.plist */,
+				A1AB4A1A1FD16209007E0410 /* Observer.swift */,
 			);
 			path = BoilerplateWars;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A16DCAAC1FCF713A007EB7F6 /* ServiceLocator.swift in Sources */,
+				A1AB4A1B1FD16209007E0410 /* Observer.swift in Sources */,
 				A16DCA841FCCD8BE007EB7F6 /* JoinRebelionViewController.swift in Sources */,
 				A16DCAAE1FCF7185007EB7F6 /* JoinRebelionPresenter.swift in Sources */,
 				A16DCA821FCCD8BE007EB7F6 /* AppDelegate.swift in Sources */,
