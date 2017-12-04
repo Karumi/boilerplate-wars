@@ -59,4 +59,7 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
+# Facebook screenshot
+*/FailureDiffs/
+
 # End of https://www.gitignore.io/api/swift

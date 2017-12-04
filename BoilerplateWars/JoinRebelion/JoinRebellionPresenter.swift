@@ -99,7 +99,7 @@ class JoinRebellionPresenter {
 
         fileprivate func joinAttempt() {
             joinAttemps += 1
-            if fighterName?.uppercased() == "xwing".uppercased() {
+            if fighterName?.uppercased() == "x-wing".uppercased() {
                 state = .Joined
             } else {
                 state = (joinAttemps - 1 == maxJoinAttemps) ? .Rejected : .Failed

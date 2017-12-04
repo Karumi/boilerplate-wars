@@ -93,7 +93,7 @@ class JoinRebellionScreenshotTests: BaseUITestCase {
     func test_shows_successful_message_for_xwing_name() {
         serviceLocator.rootNavigator.goToJoinRebellion()
 
-        driver.enterTextAsName("xwing")
+        driver.enterTextAsName("x-wing")
 
         let view = serviceLocator.currentWindow?.rootViewController?.view!
         verify(view!)
