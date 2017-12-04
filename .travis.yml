@@ -6,5 +6,4 @@ before_install:
   - gem install xcpretty
 
 script:
-  - swiftlint
   - set -o pipefail && xcodebuild -workspace BoilerplateWars.xcworkspace -scheme 'BoilerplateWars' -destination 'platform=iOS Simulator,name=iPhone 6' build test CODE_SIGN_IDENTITY=- | xcpretty -c
