@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JoinRebelionViewController: UIViewController {
+class JoinRebellionViewController: UIViewController {
 
     @IBOutlet weak var starFighterNameTextField: UITextField! {
         didSet {
@@ -34,12 +34,12 @@ class JoinRebelionViewController: UIViewController {
     
     @IBOutlet var horizontalSpacingFighterAndJoin: NSLayoutConstraint!
 
-    var presenter: JoinRebelionPresenter!
+    var presenter: JoinRebellionPresenter!
 
     var observer = Observer()
 
     override func awakeFromNib() {
-        presenter = ServiceLocator.sharedInstance.getJoinRebelionPresenter()
+        presenter = ServiceLocator.sharedInstance.getJoinRebellionPresenter()
         super.awakeFromNib()
     }
     
@@ -47,6 +47,10 @@ class JoinRebelionViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
 
+        if let navigationController = navigationController {
+            navigationController.navigationBar.isHidden = true
+        }
+        
         // Everything related to animations cannot be in didSet
         observer.from(presenter.viewModel, \.isJoinButtonVisible).to { visibleWithAnimation in
             self.horizontalSpacingFighterAndJoin.isActive = visibleWithAnimation.visible

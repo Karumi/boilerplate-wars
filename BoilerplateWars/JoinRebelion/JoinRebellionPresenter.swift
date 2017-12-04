@@ -8,7 +8,7 @@
 
 import Foundation
 
-class JoinRebelionPresenter {
+class JoinRebellionPresenter {
 
     class VisibleWithAnimation: NSObject {
         let visible: Bool
@@ -35,7 +35,7 @@ class JoinRebelionPresenter {
         static let Success = DescriptionColor(Color.Success)
     }
 
-    class JoinRebelionViewModel: NSObject {
+    class JoinRebellionViewModel: NSObject {
         fileprivate var fighterName: String? {
             didSet {
                 if let fighterName = fighterName {
@@ -111,10 +111,10 @@ class JoinRebelionPresenter {
     var joinAttemps = 0
     let maxJoinAttemps = 3
 
-    var viewModel: JoinRebelionViewModel
+    var viewModel: JoinRebellionViewModel
 
     init() {
-        viewModel = JoinRebelionViewModel()
+        viewModel = JoinRebellionViewModel()
     }
 
     func viewDidLoad() {
