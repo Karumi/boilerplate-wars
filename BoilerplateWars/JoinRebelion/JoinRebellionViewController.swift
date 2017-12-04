@@ -9,14 +9,23 @@
 import UIKit
 
 class JoinRebellionViewController: UIViewController {
+    struct AccessibilityLabel {
+        public static let starFighterNameTextField = "Text field for star fighter name"
+        public static let joinRebellionButton = "Join Rebellion button"
+    }
 
     @IBOutlet weak var starFighterNameTextField: UITextField! {
         didSet {
+            starFighterNameTextField.accessibilityLabel = JoinRebellionViewController.AccessibilityLabel.starFighterNameTextField
             observer.from(presenter.viewModel, \.fighterNameText).mapAsOptional().to(starFighterNameTextField, \.text)
             observer.from(presenter.viewModel, \.isFighterNameEnabled).to(starFighterNameTextField, \.isEnabled)
         }
     }
-    @IBOutlet weak var joinButton: UIButton!
+    @IBOutlet weak var joinButton: UIButton! {
+        didSet {
+            joinButton.accessibilityLabel = JoinRebellionViewController.AccessibilityLabel.joinRebellionButton
+        }
+    }
     @IBOutlet weak var descriptionLabel: UILabel! {
         didSet {
             observer.from(presenter.viewModel, \.isDescriptionHidden).to(descriptionLabel, \.isHidden)
@@ -30,7 +39,6 @@ class JoinRebellionViewController: UIViewController {
             }).to(descriptionLabel, \.textColor)
         }
     }
-    @IBOutlet weak var rebelionLogo: UIImageView!
     
     @IBOutlet var horizontalSpacingFighterAndJoin: NSLayoutConstraint!
 

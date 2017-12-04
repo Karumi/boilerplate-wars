@@ -87,7 +87,6 @@
                         <outlet property="descriptionLabel" destination="G9d-i7-CfY" id="Q4y-by-h39"/>
                         <outlet property="horizontalSpacingFighterAndJoin" destination="gQa-IQ-ntx" id="8Cb-B4-bKE"/>
                         <outlet property="joinButton" destination="mHx-S6-qFT" id="YMe-62-edb"/>
-                        <outlet property="rebelionLogo" destination="i9x-78-PHc" id="vqD-W8-OR4"/>
                         <outlet property="starFighterNameTextField" destination="QjL-TK-zVu" id="UtE-ti-N2J"/>
                     </connections>
                 </viewController>
