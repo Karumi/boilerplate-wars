@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Join Rebelion View Controller-->
+        <!--Join Rebellion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="JoinRebelionViewController" customModule="BoilerplateWars" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JoinRebellionViewController" id="BYZ-38-t0r" customClass="JoinRebellionViewController" customModule="BoilerplateWars" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +87,6 @@
                         <outlet property="descriptionLabel" destination="G9d-i7-CfY" id="Q4y-by-h39"/>
                         <outlet property="horizontalSpacingFighterAndJoin" destination="gQa-IQ-ntx" id="8Cb-B4-bKE"/>
                         <outlet property="joinButton" destination="mHx-S6-qFT" id="YMe-62-edb"/>
-                        <outlet property="rebelionLogo" destination="i9x-78-PHc" id="vqD-W8-OR4"/>
                         <outlet property="starFighterNameTextField" destination="QjL-TK-zVu" id="UtE-ti-N2J"/>
                     </connections>
                 </viewController>
