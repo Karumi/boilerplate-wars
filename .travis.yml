@@ -6,4 +6,4 @@ before_install:
   - gem install xcpretty
 
 script:
-  - set -o pipefail && xcodebuild -workspace BoilerplateWars.xcworkspace -scheme 'BoilerplateWars' -destination 'platform=iOS Simulator,name=iPhone 6' build test CODE_SIGN_IDENTITY=- | xcpretty -c
+  - set -o pipefail && xcodebuild -workspace BoilerplateWars.xcworkspace -scheme 'BoilerplateWars' -destination 'platform=iOS Simulator,name=iPhone 6s Plus' build test CODE_SIGN_IDENTITY=- | xcpretty -c
