@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A16DCA821FCCD8BE007EB7F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCA811FCCD8BE007EB7F6 /* AppDelegate.swift */; };
-		A16DCA841FCCD8BE007EB7F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCA831FCCD8BE007EB7F6 /* ViewController.swift */; };
+		A16DCA841FCCD8BE007EB7F6 /* JoinRebelionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCA831FCCD8BE007EB7F6 /* JoinRebelionViewController.swift */; };
 		A16DCA871FCCD8BE007EB7F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16DCA851FCCD8BE007EB7F6 /* Main.storyboard */; };
 		A16DCA891FCCD8BE007EB7F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16DCA881FCCD8BE007EB7F6 /* Assets.xcassets */; };
 		A16DCA8C1FCCD8BE007EB7F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A16DCA8A1FCCD8BE007EB7F6 /* LaunchScreen.storyboard */; };
 		A16DCA971FCCD8BF007EB7F6 /* BoilerplateWarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCA961FCCD8BF007EB7F6 /* BoilerplateWarsTests.swift */; };
+		A16DCAAC1FCF713A007EB7F6 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCAAB1FCF713A007EB7F6 /* ServiceLocator.swift */; };
+		A16DCAAE1FCF7185007EB7F6 /* JoinRebelionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DCAAD1FCF7185007EB7F6 /* JoinRebelionPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		A16DCA7E1FCCD8BE007EB7F6 /* BoilerplateWars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoilerplateWars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16DCA811FCCD8BE007EB7F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A16DCA831FCCD8BE007EB7F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A16DCA831FCCD8BE007EB7F6 /* JoinRebelionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRebelionViewController.swift; sourceTree = "<group>"; };
 		A16DCA861FCCD8BE007EB7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A16DCA881FCCD8BE007EB7F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A16DCA8B1FCCD8BE007EB7F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		A16DCA921FCCD8BE007EB7F6 /* BoilerplateWarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoilerplateWarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16DCA961FCCD8BF007EB7F6 /* BoilerplateWarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilerplateWarsTests.swift; sourceTree = "<group>"; };
 		A16DCA981FCCD8BF007EB7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A16DCAAB1FCF713A007EB7F6 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		A16DCAAD1FCF7185007EB7F6 /* JoinRebelionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRebelionPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,8 @@
 		A16DCA801FCCD8BE007EB7F6 /* BoilerplateWars */ = {
 			isa = PBXGroup;
 			children = (
+				A16DCAAA1FCF6F54007EB7F6 /* JoinRebelion */,
 				A16DCA811FCCD8BE007EB7F6 /* AppDelegate.swift */,
-				A16DCA831FCCD8BE007EB7F6 /* ViewController.swift */,
 				A16DCA851FCCD8BE007EB7F6 /* Main.storyboard */,
 				A16DCA881FCCD8BE007EB7F6 /* Assets.xcassets */,
 				A16DCA8A1FCCD8BE007EB7F6 /* LaunchScreen.storyboard */,
@@ -94,6 +98,16 @@
 				A16DCA981FCCD8BF007EB7F6 /* Info.plist */,
 			);
 			path = BoilerplateWarsTests;
+			sourceTree = "<group>";
+		};
+		A16DCAAA1FCF6F54007EB7F6 /* JoinRebelion */ = {
+			isa = PBXGroup;
+			children = (
+				A16DCA831FCCD8BE007EB7F6 /* JoinRebelionViewController.swift */,
+				A16DCAAB1FCF713A007EB7F6 /* ServiceLocator.swift */,
+				A16DCAAD1FCF7185007EB7F6 /* JoinRebelionPresenter.swift */,
+			);
+			path = JoinRebelion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16DCA841FCCD8BE007EB7F6 /* ViewController.swift in Sources */,
+				A16DCAAC1FCF713A007EB7F6 /* ServiceLocator.swift in Sources */,
+				A16DCA841FCCD8BE007EB7F6 /* JoinRebelionViewController.swift in Sources */,
+				A16DCAAE1FCF7185007EB7F6 /* JoinRebelionPresenter.swift in Sources */,
 				A16DCA821FCCD8BE007EB7F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
