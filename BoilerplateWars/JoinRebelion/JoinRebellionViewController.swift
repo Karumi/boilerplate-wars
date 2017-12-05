@@ -45,11 +45,6 @@ class JoinRebellionViewController: UIViewController {
     var presenter: JoinRebellionPresenter!
 
     var observer = Observer()
-
-    override func awakeFromNib() {
-        presenter = ServiceLocator.sharedInstance.getJoinRebellionPresenter()
-        super.awakeFromNib()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
